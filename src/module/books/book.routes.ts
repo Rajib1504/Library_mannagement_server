@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { createBook, deleteBook, getBook, getBooks, updateBooks } from "./book.controler";
+import { Router } from 'express';
+import { createBook, deleteBook, getBook, getBooks, updateBooks } from './book.controler';
 
 const bookRoute = Router();
 
@@ -9,4 +9,4 @@ bookRoute.delete('/:bookId',deleteBook);
 bookRoute.put('/:bookId',updateBooks);
 
 bookRoute.get('/',getBooks);
-export default bookRoute
+export default bookRoute;

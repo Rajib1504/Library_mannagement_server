@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { borrowControler } from "./borrow.controler";
+import { Router } from 'express';
+import { borrowControler } from './borrow.controler';
 
 const borrowRoute = Router();
 
