@@ -391,12 +391,11 @@ npm start
 
 ## 📄 License
 
-This project is created for educational purposes as part of the Library Management System assignment.
+This project is created for educational purposes as part of the Library Management System.
 
 ## 👨‍💻 Author
 
-[Your Name] - Library Management API Assignment
+Rajib Sardar
 
 ---
 
-**Note:** This API strictly follows the provided assignment requirements with exact endpoint structures and response formats as specified in the documentation.
