@@ -4,9 +4,9 @@ import { createBook, deleteBook, getBook, getBooks, updateBooks } from './book.c
 const bookRoute = Router();
 
 bookRoute.post('/',createBook);
+bookRoute.get('/',getBooks);
 bookRoute.get('/:bookId',getBook);
 bookRoute.delete('/:bookId',deleteBook);
 bookRoute.put('/:bookId',updateBooks);
 
-bookRoute.get('/',getBooks);
 export default bookRoute;

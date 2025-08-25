@@ -20,7 +20,8 @@ app.get('/', (req: Request, res: Response) => {
   });
 });
 
-app.use('*', (req: Request, res: Response) => {
+// 404 handler
+app.use((req: Request, res: Response) => {
   res.status(404).json({
     success: false,
     message: 'Route not found',
@@ -29,14 +30,6 @@ app.use('*', (req: Request, res: Response) => {
 });
 
 
-app.use((error: any, req: Request, res: Response) => {
-  console.error('Global error:', error);
-  res.status(500).json({
-    success: false,
-    message: 'Internal server error',
-    error: error.message,
-  });
-});
 
 
 async function startServer() {
@@ -50,7 +43,7 @@ async function startServer() {
     });
   } catch (error) {
     console.error('❌ Server startup error:', error);
-  
+    process.exit(1);
   }
 }
 
