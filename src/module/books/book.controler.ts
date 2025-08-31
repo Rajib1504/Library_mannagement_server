@@ -32,9 +32,11 @@ const getBooks = async (req: Request, res: Response) => {
       const sortOrder = sort === 'desc' ? -1 : 1;
       query = query.sort({ [sortBy as string]: sortOrder });
     }
-
-    const limitValue = limit ? Number(limit) : 10;
-    query = query.limit(limitValue);
+    if (limit) {
+      const limitValue = Number(limit);
+      query = query.limit(limitValue);
+    }
+    
 
     const books = await query;
     res.status(200).json({
